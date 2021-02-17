@@ -14,8 +14,8 @@ const Articles = props => {
     <>
       <Messages>
         {props.error && <Error>{props.error}test</Error>}
-        {props.isFetching && <p>Loading articles...</p>}
-        <button onClick={handleClick}>Get Articles</button>
+        {props.isFetching && <p style={{color:"white"}}>Loading articles...</p>}
+        {!props.articles.length && (!props.isFetching && <Btn onClick={handleClick}>Get Articles</Btn>)}
       </Messages>
       <FlexContainer>
         {props.articles.map(x => <Article key={x.id} details={x} />)}
@@ -31,6 +31,23 @@ const mapStateToProps = state => {
     error: state.error,
   };
 };
+
+const Btn = styled.button`
+  padding:1%;
+  border-radius: 3%;
+  font-size: 1.125rem;
+  font-weight: bold;
+  background-color: dodgerBlue;
+  color: #222222;
+  border: 2px solid #222222;
+
+  &:hover{
+    color: #eeeeee;
+    border:none;
+    box-shadow: 2px 2px #eeeeee;
+    cursor:pointer;  
+  }
+`
 
 const Error = styled.div`
   background-color:#ffc0c0;

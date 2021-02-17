@@ -13,7 +13,7 @@ const Article = props => {
         </Caption>
       </div>
       <h4>{props.details.title}</h4>
-      <p>{props.details.summary}</p>
+      <p>{props.details.summary.split(' ').slice(0,13).join(' ')}{props.details.summary.split(' ').length > 12 ? '....' : null}</p>
     </StyledCard>
   )
 }
