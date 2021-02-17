@@ -19,7 +19,7 @@ const reducer = (state=initialState, action) => {
         ...state,
         isFetching: false,
         error:'',
-        articles: action.payload,
+        articles: [...state.articles, ...action.payload],
       }
     case FETCH_FAILED:
       return {

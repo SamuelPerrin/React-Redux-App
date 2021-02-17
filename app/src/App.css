@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+body {
+  background-color: #222222;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +39,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h1 {
+  color: white;
 }
