@@ -15,7 +15,7 @@ const Articles = props => {
       <Messages>
         {props.error && <Error>{props.error}test</Error>}
         {props.isFetching && <p style={{color:"white"}}>Loading articles...</p>}
-        {!props.articles.length && (!props.isFetching && <Btn onClick={handleClick}>Get Articles</Btn>)}
+        {!props.articles.length && (!props.isFetching && <Btn onClick={handleClick}>Get the Latest Space News</Btn>)}
       </Messages>
       <FlexContainer>
         {props.articles.map(x => <Article key={x.id} details={x} />)}
