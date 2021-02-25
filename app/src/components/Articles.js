@@ -68,7 +68,7 @@ const Messages = styled.div`
 const FlexContainer = styled.div`
   display:flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items:flex-start;
   background-color:#222222;
 `
